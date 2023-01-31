@@ -1,7 +1,7 @@
 <template>
     <h1>Dashboard</h1>
-</template>
 
+</template>
 <script>
     export default {
         name:"Dashboard"
@@ -11,3 +11,4 @@
 <style scoped>
 
 </style>
+
