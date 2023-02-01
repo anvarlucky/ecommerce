@@ -15,11 +15,11 @@ use App\Http\Controllers\api\v1\TypeController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('goods',[GoodsController::class,'index']);
+    Route::get('good/{id}',[GoodsController::class,'show']);
+    Route::post('good',[GoodsController::class,'store']);
+    Route::get('types',[TypeController::class,'index']);
+    Route::post('type',[TypeController::class,'store']);
 });
-Route::get('goods',[GoodsController::class,'index']);
-Route::get('good/{id}',[GoodsController::class,'show']);
-Route::post('good',[GoodsController::class,'store']);
-Route::get('types',[TypeController::class,'index']);
-Route::post('type',[TypeController::class,'store']);
+
