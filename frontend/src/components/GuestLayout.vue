@@ -5,7 +5,9 @@
             <div>
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">{{title}}</h2>
             </div>
+            <!--<form class="mt-8 space-y-6" @submit.prevent="emit('submit')" method="POST">-->
             <slot></slot>
+            <!--</form>-->
         </div>
     </div>
 </template>
@@ -14,6 +16,7 @@
     const {title} = defineProps({
         title:String
     })
+    /*const emit = defineEmits(['submit'])*/
 </script>
 
 <style scoped>
